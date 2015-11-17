@@ -10,7 +10,7 @@ mod 'puppetlabs/ntp', :latest
 
 #Consul
 mod "KyleAnderson/consul", "1.0.2"
-
+mod "nanliu/staging", "1.0.3"
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
 #mod "puppetlabs/inifile", '1.3.0'
