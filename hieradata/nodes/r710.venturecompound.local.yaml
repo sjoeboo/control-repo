@@ -23,6 +23,5 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/sabnzbd:/config'
       - '/storage:/data'
-    command: 'sabnzbd'
 
   
