@@ -19,9 +19,10 @@ docker_containers:
     use_name: true
     hostname: "%{fqdn}"
     ports:
-      - '8085:8085'
-      - '53:8600/udp'
+      - '8085:8080'
     volumes:
       - '/home/matt/Development/docker_media_center/configs/sabnzbd:/config'
       - '/storage:/data'
+    command: 'sabnzbd'
+
   
