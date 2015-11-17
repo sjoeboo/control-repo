@@ -6,6 +6,9 @@ forge "http://forge.puppetlabs.com"
 mod "puppetlabs/inifile", :latest
 mod "puppetlabs/stdlib", :latest
 mod "puppetlabs/concat", :latest
+mod 'puppetlabs/ntp', :latest
+
+
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
