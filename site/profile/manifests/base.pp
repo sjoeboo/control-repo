@@ -4,6 +4,6 @@ class profile::base {
   class { '::docker': }
   
   $docker_containers = hiera('docker_containers',{})
-  create_resources($docker_containers,docker::run)
+  create_resources(docker::run,$docker_containers)
 }
 
