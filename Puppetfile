@@ -13,7 +13,7 @@ mod "KyleAnderson/consul", "1.0.2"
 mod "nanliu/staging", "1.0.3"
 
 #HieraConsul
-mod "lynxman/hiera-consul", "0.1.1"
+mod "lynxman/hiera_consul", "0.1.1"
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
