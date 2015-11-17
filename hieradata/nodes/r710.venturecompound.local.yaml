@@ -23,7 +23,7 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/sabnzbd:/config'
       - '/storage:/data'
-   sickbeard:
+  sickbeard:
     image: 'timhaak/sickbeard'
     use_name: true
     hostname: "%{fqdn}"
