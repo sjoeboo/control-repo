@@ -16,7 +16,7 @@ mod "nanliu/staging", "1.0.3"
 #mod "lynxman/hiera_consul", "0.1.1"
 mod "hiera_consul",
   :git => "https://github.com/jsok/hiera-consul.git",
-  :tag => '0.0.3'
+  :tag => 'v0.0.3'
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
 #mod "puppetlabs/inifile", '1.3.0'
