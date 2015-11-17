@@ -4,6 +4,6 @@ consul::config_hash:
   data_dir: '/opt/consul'
   datacenter: 'home'
   log_level: 'INFO'
-  node_name: 'R710
+  node_name: 'R710'
   server: true
   ui_dir: '/opt/consul/ui'
