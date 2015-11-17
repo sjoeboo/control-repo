@@ -8,6 +8,12 @@ consul::config_hash:
   server: true
   ui_dir: '/opt/consul/ui'
 docker_containers:
+  registrator:
+    image: 'gliderlabs/registrator:latest'
+    net: 'host'
+    volumes:
+      - '/var/run/docker.sock:/tmp/docker.dock'
+    command: 'consul://localhost:8500'
   sabnzbd:
     image: 'timhaak/sabnzbd'
     use_name: true
@@ -18,3 +24,4 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/sabnzbd:/config'
       - '/storage:/data'
+  
