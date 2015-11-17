@@ -51,6 +51,13 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/plex:/config'
       - '/storage:/data'
-
-
+  mylar:
+    image: 'timhaak/mylar'
+    use_name: true
+    hostname: "%{fqdn}"
+    ports:
+      - '8090:8090'
+    volumes:
+      - '/home/matt/Development/docker_media_center/configs/mylar:/config'
+      - '/storage:/data'
  
