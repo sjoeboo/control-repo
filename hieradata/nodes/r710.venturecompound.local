@@ -1,2 +1,9 @@
 ---
-
+consul::config_hash: 
+  bootstrap_expect: 1
+  data_dir: '/opt/consul'
+  datacenter: 'home'
+  log_level: 'INFO'
+  node_name: 'R710
+  server: true
+  ui_dir: '/opt/consul/ui'

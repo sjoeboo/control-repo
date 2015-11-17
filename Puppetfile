@@ -8,7 +8,8 @@ mod "puppetlabs/stdlib", :latest
 mod "puppetlabs/concat", :latest
 mod 'puppetlabs/ntp', :latest
 
-
+#Consul
+mod "kyleanderson/consul", "1.0.2"
 
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
