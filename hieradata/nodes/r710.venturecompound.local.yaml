@@ -23,5 +23,14 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/sabnzbd:/config'
       - '/storage:/data'
+   sickbeard:
+    image: 'timhaak/sickbeard'
+    use_name: true
+    hostname: "%{fqdn}"
+    ports:
+      - '8081:8081'
+    volumes:
+      - '/home/matt/Development/docker_media_center/configs/sickbeard:/config'
+      - '/storage:/data'
 
-  
+ 
