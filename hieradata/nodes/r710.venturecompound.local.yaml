@@ -46,8 +46,6 @@ docker_containers:
     use_name: true
     hostname: "%{fqdn}"
     net: 'host'
-    ports:
-      - '32400:32400'
     volumes:
       - '/home/matt/Development/docker_media_center/configs/plex:/config'
       - '/storage:/data'
