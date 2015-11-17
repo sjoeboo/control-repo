@@ -37,7 +37,7 @@ docker_containers:
     use_name: true
     hostname: "%{fqdn}"
     ports:
-      - '5050"5050'
+      - '5050:5050'
     volumes:
       - '/home/matt/Development/docker_media_center/configs/couchpotato:/config'
       - '/storage:/data'
