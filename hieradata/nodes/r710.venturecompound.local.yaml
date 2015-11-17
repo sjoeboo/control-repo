@@ -41,5 +41,16 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/couchpotato:/config'
       - '/storage:/data'
+  plex:
+    image: 'timhaak/plexpass'
+    use_name: true
+    hostname: "%{fqdn}"
+    net: 'host'
+    ports:
+      - '32400:32400'
+    volumes:
+      - '/home/matt/Development/docker_media_center/configs/plex:/config'
+      - '/storage:/data'
+
 
  
