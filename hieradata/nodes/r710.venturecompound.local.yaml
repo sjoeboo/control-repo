@@ -7,3 +7,14 @@ consul::config_hash:
   node_name: 'R710'
   server: true
   ui_dir: '/opt/consul/ui'
+docker_containers:
+  sabnzbd:
+    image: 'timhaak/sabnzbd'
+    use_name: true
+    hostname: "%{fqdn}"
+    ports:
+      - '8085:8085'
+      - '53:8600/udp'
+    volumes:
+      - '/home/matt/Development/docker_media_center/configs/sabnzbd:/config'
+      - '/storage:/data'
