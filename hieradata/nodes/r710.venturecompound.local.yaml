@@ -44,7 +44,6 @@ docker_containers:
   plex:
     image: 'timhaak/plexpass'
     use_name: true
-    hostname: "%{fqdn}"
     net: 'host'
     volumes:
       - '/home/matt/Development/docker_media_center/configs/plex:/config'
