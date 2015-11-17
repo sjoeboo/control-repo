@@ -3,7 +3,7 @@ class profile::base {
   class { '::consul': }
   class { '::docker': }
   
-  docker_containers = hiera('docker_containers',{})
+  $docker_containers = hiera('docker_containers',{})
   create_resources($docker_containers,docker::run)
 }
 
