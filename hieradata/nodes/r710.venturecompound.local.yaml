@@ -2,7 +2,7 @@
 classes:
   - puppetdb
   - puppetdb::master::config
-  - puppetbaord
+  - puppetboard
   - apache
   - apache::mod::wsgi
 puppetboard::apache::vhost::port: 8888
