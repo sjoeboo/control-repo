@@ -6,6 +6,8 @@ classes:
   - apache
   - apache::mod::wsgi
   - puppetboard::apache::vhost
+puppetdb::master::config::manage_report_processor: true
+puppetdb::master::config::enable_reports: true
 puppetboard::apache::vhost::vhost_name: 'localhost'
 puppetboard::apache::vhost::port: 8888
 python::dev: true
