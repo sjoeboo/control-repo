@@ -6,7 +6,7 @@ classes:
   - apache
   - apache::mod::wsgi
 puppetboard::apache::vhost::port: 8888
-python::dev: 'present'
+python::dev: true
 consul::config_hash: 
   bootstrap_expect: 1
   data_dir: '/opt/consul'
