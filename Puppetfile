@@ -22,7 +22,7 @@ mod "puppetlabs/puppetdb", "5.0.0"
 mod "puppetlabs/postgresql", "4.6.0"
 mod "puppetlabs/firewall", "1.7.1"
 mod "nibalizer/puppetboard", "2.5.0"
-
+mod "stankevich/python", "1.10.0"
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
 #mod "puppetlabs/inifile", '1.3.0'
