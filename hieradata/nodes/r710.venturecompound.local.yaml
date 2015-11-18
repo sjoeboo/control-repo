@@ -1,4 +1,7 @@
 ---
+classes:
+  - puppetdb
+  - puppetdb::master::config
 consul::config_hash: 
   bootstrap_expect: 1
   data_dir: '/opt/consul'
