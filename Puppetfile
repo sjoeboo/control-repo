@@ -16,6 +16,10 @@ mod "nanliu/staging", "1.0.3"
 #Docker
 mod "garethr/docker", "4.1.1"
 
+#Puppetdb
+mod "puppetlabs/puppetdb", "5.0.0"
+mod "puppetlabs/postgresql", "4.6.0"
+mod "puppetlabs/firewall", "1.7.1"
 #An example of using a specific forge module version instead of latest
 #Notice the addition of single quotes
 #mod "puppetlabs/inifile", '1.3.0'
