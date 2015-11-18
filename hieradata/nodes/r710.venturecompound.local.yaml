@@ -6,6 +6,7 @@ classes:
   - apache
   - apache::mod::wsgi
   - puppetboard::apache::vhost
+puppetboard::apache::vhost::vhost_name: 'localhost'
 puppetboard::apache::vhost::port: 8888
 python::dev: true
 python::virtualenv: true
