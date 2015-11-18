@@ -2,7 +2,7 @@
 classes:
   - puppetdb
   - puppetdb::master::config
-puppetdb::ssl_listen_post: '8082'
+puppetdb::server::ssl_listen_post: '8082'
 consul::config_hash: 
   bootstrap_expect: 1
   data_dir: '/opt/consul'
