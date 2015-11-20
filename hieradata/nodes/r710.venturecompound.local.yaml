@@ -12,7 +12,7 @@ puppetboard::apache::vhost::vhost_name: 'localhost'
 puppetboard::apache::vhost::port: 8888
 python::dev: true
 python::virtualenv: true
-consul::config_hash: 
+consul::config_hash:
   bootstrap_expect: 1
   data_dir: '/opt/consul'
   datacenter: 'home'
@@ -38,6 +38,8 @@ docker_containers:
       - '/storage:/data'
   sickbeard:
     image: 'timhaak/sickbeard'
+    links:
+      - 'sabnzbd:sabnzbd'
     use_name: true
     hostname: "%{fqdn}"
     ports:
@@ -47,6 +49,8 @@ docker_containers:
       - '/storage:/data'
   couchpotato:
     image: 'timhaak/couchpotato'
+    links:
+      - 'sabnzbd:sabnzbd'
     use_name: true
     hostname: "%{fqdn}"
     ports:
@@ -63,6 +67,8 @@ docker_containers:
       - '/storage:/data'
   mylar:
     image: 'timhaak/mylar'
+    links:
+      - 'sabnzbd:sabnzbd'
     use_name: true
     hostname: "%{fqdn}"
     ports:
@@ -70,4 +76,3 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/mylar:/config'
       - '/storage:/data'
- 
