@@ -29,6 +29,8 @@ docker_containers:
     command: 'consul://localhost:8500'
   sabnzbd:
     image: 'timhaak/sabnzbd'
+    links:
+      - 'sickbeard:sickbeard'
     use_name: true
     hostname: "%{fqdn}"
     ports:
