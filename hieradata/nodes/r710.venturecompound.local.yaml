@@ -47,6 +47,8 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/sickbeard:/config'
       - '/storage:/data'
+    depends:
+      - sabnzbd
   couchpotato:
     image: 'timhaak/couchpotato'
     links:
@@ -58,6 +60,8 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/couchpotato:/config'
       - '/storage:/data'
+    depends:
+      - sabnzbd
   plex:
     image: 'timhaak/plexpass'
     use_name: true
@@ -76,3 +80,5 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/mylar:/config'
       - '/storage:/data'
+    depends: 
+      - sabnzbd
