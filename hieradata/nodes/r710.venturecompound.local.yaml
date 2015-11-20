@@ -66,6 +66,7 @@ docker_containers:
     image: 'timhaak/plexpass'
     use_name: true
     net: 'host'
+    priveleged: true
     volumes:
       - '/home/matt/Development/docker_media_center/configs/plex:/config'
       - '/storage:/data'
@@ -80,5 +81,5 @@ docker_containers:
     volumes:
       - '/home/matt/Development/docker_media_center/configs/mylar:/config'
       - '/storage:/data'
-    depends: 
+    depends:
       - sabnzbd
