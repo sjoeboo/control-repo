@@ -62,14 +62,14 @@ docker_containers:
       - '/storage:/data'
     depends:
       - sabnzbd
-  plex:
-    image: 'timhaak/plexpass'
-    use_name: true
-    net: 'host'
-    privileged: true
-    volumes:
-      - '/home/matt/Development/docker_media_center/configs/plex:/config'
-      - '/storage:/data'
+  #plex:
+  #  image: 'timhaak/plexpass'
+  #  use_name: true
+  #  net: 'host'
+  #  privileged: true
+  #  volumes:
+  #    - '/home/matt/Development/docker_media_center/configs/plex:/config'
+  #    - '/storage:/data'
   mylar:
     image: 'timhaak/mylar'
     links:
