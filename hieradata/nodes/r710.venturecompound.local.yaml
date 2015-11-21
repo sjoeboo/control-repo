@@ -65,7 +65,7 @@ docker_containers:
   plex:
     image: 'timhaak/plexpass'
     use_name: true
-    net: 'host'
+    #net: 'host'
     ports:
       - '32400:32400'
     privileged: true
