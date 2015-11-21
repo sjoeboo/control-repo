@@ -66,6 +66,8 @@ docker_containers:
     image: 'timhaak/plexpass'
     use_name: true
     net: 'host'
+    ports:
+      - '32400:32400'
     privileged: true
     volumes:
       - '/home/matt/Development/docker_media_center/configs/plex:/config'
