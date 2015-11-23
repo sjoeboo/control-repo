@@ -85,3 +85,12 @@ docker_containers:
       - '/storage:/data'
     depends:
       - sabnzbd
+  jenkins:
+    image: 'jenkins'
+    use_name: true
+    hostname: '%{fqdn}'
+    ports:
+      - '8083:8080'
+      - '50000:50000'
+    volumes:
+      - '/home/matt/Development/jenkins:/var/jenkins_home'
