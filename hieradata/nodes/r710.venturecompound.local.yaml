@@ -94,3 +94,20 @@ docker_containers:
       - '50000:50000'
     volumes:
       - '/home/matt/Development/jenkins:/var/jenkins_home'
+  rancher:
+    image: 'rancher/server'
+    use_name: true
+    hostname: '%{fqdn}'
+    ports:
+      - '8084:8080'
+    restart: always
+    links:
+      - 'rancher_agent:rancher_agent'
+  rancher_agent:
+    image: 'rancher/agent'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+    links: 'rancher:rancher'
+    command: 'http://rancher:8080'
+    depends:
+      - rancher
