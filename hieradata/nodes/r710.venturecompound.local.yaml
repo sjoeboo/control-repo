@@ -101,8 +101,6 @@ docker_containers:
     ports:
       - '8084:8080'
     restart: always
-    links:
-      - 'rancher_agent:rancher_agent'
   rancher_agent:
     image: 'rancher/agent'
     volumes:
