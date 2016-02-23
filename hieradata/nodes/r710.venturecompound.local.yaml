@@ -107,5 +107,3 @@ docker_containers:
       - '/var/run/docker.sock:/var/run/docker.sock'
     links: 'rancher:rancher'
     command: 'http://rancher:8080'
-    depends:
-      - rancher
