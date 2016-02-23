@@ -97,13 +97,11 @@ docker_containers:
   rancher:
     image: 'rancher/server'
     use_name: true
-    hostname: '%{fqdn}'
     ports:
       - '8084:8080'
   rancher_agent:
     use_name: true
     image: 'rancher/agent'
-    hostname: '%{fqdn}'
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
     links: 'rancher:rancher'
