@@ -100,7 +100,6 @@ docker_containers:
     hostname: '%{fqdn}'
     ports:
       - '8084:8080'
-    restart: always
   rancher_agent:
     use_name: true
     image: 'rancher/agent'
