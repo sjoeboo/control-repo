@@ -21,6 +21,12 @@ consul::config_hash:
   server: true
   ui_dir: '/opt/consul/ui'
 docker_containers:
+  cockpit:
+    image: 'cockpit/ws'
+    ports: 
+      - '9090:9090'
+    use_name: true
+    hostname: "%{fqdn}"
   registrator:
     image: 'gliderlabs/registrator:latest'
     net: 'host'
