@@ -12,6 +12,11 @@ puppetboard::apache::vhost::vhost_name: 'localhost'
 puppetboard::apache::vhost::port: 8888
 python::dev: true
 python::virtualenv: true
+firewall_rules:
+  '001 accept all to em1 interface':
+    proto: 'all'
+    iniface: 'em1'
+    action: 'accept'
 consul::config_hash:
   bootstrap_expect: 1
   data_dir: '/opt/consul'
@@ -23,7 +28,7 @@ consul::config_hash:
 docker_containers:
   cockpit:
     image: 'cockpit/ws'
-    ports: 
+    ports:
       - '9090:9090'
     use_name: true
     hostname: "%{fqdn}"
