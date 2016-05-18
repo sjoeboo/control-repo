@@ -13,9 +13,8 @@ puppetboard::apache::vhost::port: 8888
 python::dev: true
 python::virtualenv: true
 firewall_rules:
-  '001 accept all to em1 interface':
+  '001 accept all to all interface':
     proto: 'all'
-    iniface: 'em1'
     action: 'accept'
 consul::config_hash:
   bootstrap_expect: 1
