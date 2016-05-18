@@ -25,12 +25,12 @@ consul::config_hash:
   server: true
   ui_dir: '/opt/consul/ui'
 docker_containers:
-  cockpit:
-    image: 'cockpit/ws'
-    ports:
-      - '9090:9090'
-    use_name: true
-    hostname: "%{fqdn}"
+#  cockpit:
+#    image: 'cockpit/ws'
+#    ports:
+#      - '9090:9090'
+#    use_name: true
+#    hostname: "%{fqdn}"
   registrator:
     image: 'gliderlabs/registrator:latest'
     net: 'host'
@@ -104,15 +104,15 @@ docker_containers:
       - '50000:50000'
     volumes:
       - '/home/matt/Development/jenkins:/var/jenkins_home'
-  rancher:
-    image: 'rancher/server'
-    use_name: true
-    ports:
-      - '8084:8080'
-  rancher_agent:
-    use_name: true
-    image: 'rancher/agent'
-    volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'
-    links: 'rancher:rancher'
-    command: 'http://rancher:8080'
+#  rancher:
+#    image: 'rancher/server'
+#    use_name: true
+#    ports:
+#      - '8084:8080'
+#  rancher_agent:
+#    use_name: true
+#    image: 'rancher/agent'
+#    volumes:
+#      - '/var/run/docker.sock:/var/run/docker.sock'
+#    links: 'rancher:rancher'
+#    command: 'http://rancher:8080'
