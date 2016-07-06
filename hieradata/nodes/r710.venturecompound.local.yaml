@@ -104,6 +104,18 @@ docker_containers:
       - '50000:50000'
     volumes:
       - '/home/matt/Development/jenkins:/var/jenkins_home'
+  'transmission':
+    image: 'timhaak/transmission'
+    hostname: "%{fqdn}"
+    ports:
+      - 45555:45555
+      - 9091:9091
+    volumes:
+      - '/home/matt/Development/docker_media_center/configs/transmission:/config'
+      - '/storage/Downloads/transmission_watch:/watch'
+      - '/storage/Downloads/complete:/downloads'
+      - '/storage/Downloads/incomplete:/incomplete'
+    
 #  rancher:
 #    image: 'rancher/server'
 #    use_name: true
